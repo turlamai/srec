@@ -45,7 +45,7 @@ raco pkg install srec
 
 [完整 Scribble 手册](srec/scribblings/srec.scrbl)说明记录类型、解析/
 序列化契约、地址宽度、校验和与错误语义。`scribble/example` 示例会在
-文档构建时执行。[可运行入门示例](examples/quickstart.rkt)使用合成数据
+文档构建时执行。[可运行入门示例](srec/examples/quickstart.rkt)使用合成数据
 检查上文的映像往返和入口地址，不需要真实 ECU 或固件文件。
 
 在已安装 Racket 的本地仓库根目录执行：
@@ -53,7 +53,7 @@ raco pkg install srec
 ```sh
 raco pkg install --auto --link "$(pwd)"
 raco test -p srec
-racket examples/quickstart.rkt
+racket srec/examples/quickstart.rkt
 raco setup --check-pkg-deps -l srec
 ```
 

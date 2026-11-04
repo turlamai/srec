@@ -62,7 +62,7 @@ optional start record.
 [The Scribble manual](srec/scribblings/srec.scrbl) documents record kinds,
 parser/serializer contracts, address-width and checksum validation, and
 error conditions. Its examples use `scribble/example`, so a documentation
-build executes them. The [standalone quickstart](examples/quickstart.rkt)
+build executes them. The [standalone quickstart](srec/examples/quickstart.rkt)
 checks the above round trip with synthetic data, including the start address;
 no real ECU or firmware is required.
 
@@ -71,7 +71,7 @@ From the repository root, with Racket installed:
 ```sh
 raco pkg install --auto --link "$(pwd)"
 raco test -p srec
-racket examples/quickstart.rkt
+racket srec/examples/quickstart.rkt
 raco setup --check-pkg-deps -l srec
 ```
 
